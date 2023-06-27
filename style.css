@@ -6,8 +6,8 @@ body, h1, h2, h3, h4, p, ul, li {
 
 body {
   font-family: Arial, sans-serif;
-  background-color: #f4f4f4;
-  color: #333;
+  background-color: #fff;
+  color: #000;
   line-height: 1.6;
   padding: 20px;
 }
@@ -52,4 +52,39 @@ footer {
   font-size: 14px;
   color: #777;
   margin-top: 30px;
+}
+
+/* Custom styles */
+body {
+  background-image: url(https://example.com/image.jpg);
+}
+
+header {
+  background-color: #000;
+  color: #fff;
+}
+
+h1 {
+  color: #ff0000;
+}
+
+p {
+  font-size: 16px;
+}
+
+ul {
+  list-style: none;
+}
+
+li {
+  margin-bottom: 10px;
+}
+
+a {
+  color: #000;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #ff0000;
 }
