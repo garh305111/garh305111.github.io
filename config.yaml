@@ -48,7 +48,7 @@ projects:
 
   - title: "企業數據競賽亞軍專案"
     image: "ai_image.jpg"
-    preview_url: "https://www.facebook.com/photo.php?fbid=197692755741872&id=100268118817670&set=a.136343208543494"
+    preview_url: ""
     skills: ["Data Science"]
     description: "2021企業數據競賽 玩美移動組 亞軍，運用資料探索、特徵工程及模型開發提升預測效能。"
     link: ""
