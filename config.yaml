@@ -1,83 +1,77 @@
-# 個人資訊配置
 personal:
   name: "林韋廷"
   name_en: "Wei Ting Lin"
-  title: "AI研究助理"
+  title: "AI Engineer | Bioinformatics Specialist"
   email: "leetin@myyahoo.com"
   linkedin: "https://www.linkedin.com/in/韋廷-林-3b9ab11aa"
-  description: "專注於自然語言處理與AI藥物開發的研究助理\n致力於運用量化數據工具預測事物發展的可能性"
+  description: "專精自然語言處理、深度學習與AI藥物開發，擁有跨領域的研究與實務經驗，熱衷於打造高效能的AI模型解決實際問題。"
   avatar: "avatar.jpg"
   about: |
-    我是韋廷，擅長自然語言處理以及統計分析，於就學期間擔任學校服務學習的助教，因此有機會從多方的角色思考處理同一事物的難題與思考路徑。
-    
-    對於解析事務本質有無比的熱情，希望除了縝密的邏輯思考更深層的可能性外，現階段想利用量化數據的工具更精確預測事物發展的可能。
-  institution: "國立陽明交通大學 分子醫學與生物工程研究所"
+    我是韋廷，目前擔任AI工程師，專注於結合AI與生物資訊解決醫療與藥物開發中的複雜問題。從自然語言處理到結構生物資訊，我不僅具備強大的統計分析基礎，還能設計、開發與部署深度學習模型。
 
-# 工作經歷
+    在研究與實務經驗中，我曾參與蛋白質修飾位點預測、結構模擬、以及病理聲音多模態分類等AI專案。對於跨領域合作與轉化AI技術到臨床與藥物研發應用充滿熱情，持續透過專案累積專業能力與產業經驗。
+  institution: "國立陽明交通大學生物資訊及系統生物研究所"
 experiences:
-  - title: "專任研究助理"
-    company: "國家衛生研究院生技及藥物研究所"
-    period: "2021.8 - present"
-    skills: ["Python", "Deep Learning", "AI Drug Development"]
-    tasks:
-      - "分析同事在開發中遇到的問題，並提供定制化的解決方案和建議，以幫助他們克服技術難題。"
-      - "建立深度學習模型，如神經網絡架構，用於藥物特性預測、化合物篩选和優化等任務。"
-      - "監控服務器的運行狀態和性能指標，識別潛在問題並採取相應的預防措施。"
-      - "快速響應服務器出現的緊急情況，與IT工程師緊密合作，共同解決問題。"
 
   - title: "專任研究助理"
-    company: "台北醫學大學大數據科技及管理研究所"
+    company: "國家衛生研究院 生技及藥物研究所"
+    period: "2021.8 - 2025.4"
+    skills: ["Python", "Deep Learning", "AI Drug Development", "Server Management"]
+    tasks:
+      - "協助建立AI藥物研發工作流程，開發化合物性質預測及分子特徵選擇模型。"
+      - "設計神經網路架構，提升藥物特性預測、化合物篩選與結構優化的準確度。"
+      - "監控並維護高效能運算伺服器狀態，確保模型訓練與推論的穩定執行。"
+      - "支援跨部門AI技術需求，針對同事問題提供技術諮詢與解決方案。"
+  - title: "專任研究助理"
+    company: "台北醫學大學 大數據科技及管理研究所"
     period: "2021.3 - 2021.7"
-    skills: ["NLP", "Text Analysis", "CNN/RNN"]
+    skills: ["NLP", "Text Mining", "Deep Learning (CNN/RNN)"]
     tasks:
-      - "利用 NLP 方法對相關數據進行文本分析，包括文本清洗、標記化和特徵提取。"
-      - "設計和實施自然語言處理算法，包括文本預處理、詞袋模型、詞嵌入等技術。"
-      - "建立文本分類、實體識別和情感分析等模型。"
-      - "構建深度學習模型，如CNN、RNN或Transformer，用於處理和分析數據。"
+      - "應用 NLP 技術進行臨床醫療紀錄文本處理，包括前處理、分詞、特徵萃取等。"
+      - "建構CNN、RNN等深度學習模型，執行文本分類、情感分析與命名實體識別。"
+      - "整合資料庫與前端視覺化工具，提升資料應用效益與使用者體驗。"
 
-# 專案作品
 projects:
-  - title: "CRISPR/Cas9 研究"
-    image: "CRISPR.jpg"  # 使用本地圖片
-    preview_url: ""  # 留空使用image，填入網址則預覽網站
+  - title: "AI輔助CRISPR/Cas9效率預測"
+    image: "CRISPR.jpg"
+    preview_url: ""
     skills: ["Multi-task Learning", "Transformer"]
-    description: "使用多任務學習同時預測多任務模型的架構。我們將使用基於變換器的雙向編碼器表示技術作為主要架構來訓練模型。"
+    description: "利用基於Transformer架構的多任務學習模型，同步預測CRISPR靶點效率與特定指標，協助基因編輯設計流程。"
     link: ""
 
-  - title: "2021 AICUP 醫病決策競賽"
+  - title: "AICUP 醫病決策競賽"
     image: "2021_aicup.jpg"
     preview_url: ""
-    skills: ["LSTM", "BERT", "前標"]
-    description: "使用長短期記憶模型以及基於變換器的雙向編碼器等自然語言處理深度學習作為模型架構。"
+    skills: ["LSTM", "BERT"]
+    description: "結合LSTM和BERT進行病患決策預測模型開發，分析病歷文本以協助臨床決策。"
     link: ""
 
-  - title: "2021企業數據競賽"
+  - title: "企業數據競賽亞軍專案"
     image: "data_sta.jpg"
     preview_url: ""
-    skills: ["Data Science", "亞軍"]
-    description: "數據創新服務生態系推動計畫2021企業數據競賽 玩美移動組 亞軍"
+    skills: ["Data Science"]
+    description: "2021企業數據競賽 玩美移動組 亞軍，運用資料探索、特徵工程及模型開發提升預測效能。"
     link: ""
 
-  - title: "2023 AICUP 多模態病理嗓音分類"
+  - title: "多模態病理嗓音分類 (AICUP 2023)"
     image: "multi-modal.jpg"
-    preview_url: "https://github.com/garh305111/AI-CUP-2023-SPRING--"  # 預覽GitHub頁面
-    skills: ["Multi-modal", "Audio Processing"]
-    description: "多模態病理嗓音分類競賽專案"
+    preview_url: "https://tbrain.trendmicro.com.tw/Competitions/Details/27"
+    skills: ["Multi-modal Learning", "Audio Processing"]
+    description: "整合聲音與元數據的多模態模型，有效區分病理與正常嗓音，協助病症診斷。"
     link: "https://github.com/garh305111/AI-CUP-2023-SPRING--"
 
-# 技能
 skills:
   technical:
-    - "Python & Machine Learning"
-    - "Natural Language Processing"
+    - "Python"
     - "Deep Learning (CNN, RNN, Transformer)"
-    - "HTML5 & CSS3"
-    - "Node.js & Angular.js"
-    - "SQL & Database"
-    - "Version Control (Git)"
+    - "Large Language Models"
+    - "Golang"
+    - "MongoDB"
+    - "Docker & Server Management"
+    - "Git & CI/CD"
 
   certificates:
-    - "AICUP 醫病訊息決策預判競賽 前標"
+    - "AICUP 醫病決策競賽 前標"
     - "2021企業數據競賽 亞軍"
-    - "機器學習工程師能力鑑定"
+    - "機器學習工程師認證"
     - "統計分析能力證照"
