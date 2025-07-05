@@ -4,7 +4,7 @@ personal:
   title: "AI Engineer | Bioinformatics Specialist"
   email: "leetin@myyahoo.com"
   linkedin: "https://www.linkedin.com/in/韋廷-林-3b9ab11aa"
-  description: "專精自然語言處理、深度學習與AI藥物開發，擁有跨領域的研究與實務經驗，熱衷於打造高效能的AI模型解決實際問題。"
+  description: "專精自然語言處理、深度學習與生醫AI設計，擁有跨領域的研究與實務經驗，熱衷於打造高效能的AI模型解決實際問題。"
   avatar: "avatar.jpg"
   about: |
     我是韋廷，目前擔任AI工程師，專注於結合AI與生物資訊解決醫療與藥物開發中的複雜問題。從自然語言處理到結構生物資訊，我不僅具備強大的統計分析基礎，還能設計、開發與部署深度學習模型。
@@ -55,7 +55,7 @@ projects:
 
   - title: "多模態病理嗓音分類 (AICUP 2023)"
     image: "multi-modal.jpg"
-    preview_url: "https://tbrain.trendmicro.com.tw/Competitions/Details/27"
+    preview_url: "https://www.aicup.tw/post/%E3%80%90%E5%BE%97%E7%8D%8E%E5%90%8D%E5%96%AE%E3%80%91ai-cup-2023-%E6%98%A5%E5%AD%A3%E8%B3%BD%E3%80%8C%E5%A4%9A%E6%A8%A1%E6%85%8B%E7%97%85%E7%90%86%E5%97%93%E9%9F%B3%E5%88%86%E9%A1%9E%E3%80%8D%E7%AB%B6%E8%B3%BD"
     skills: ["Multi-modal Learning", "Audio Processing"]
     description: "整合聲音與元數據的多模態模型，有效區分病理與正常嗓音，協助病症診斷。"
     link: "https://github.com/garh305111/AI-CUP-2023-SPRING--"
