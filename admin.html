@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>管理介面 - 林韋廷</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    .bg-primary { background-color: rgb(99 102 241); }
+    .text-primary { color: rgb(99 102 241); }
+    .bg-primary\/10 { background-color: rgb(99 102 241 / 0.1); }
+    .hover\:bg-primary\/90:hover { background-color: rgb(99 102 241 / 0.9); }
+  </style>
+</head>
+
+<body class="bg-gray-50">
+  <div class="min-h-screen">
+    <!-- Header -->
+    <header class="bg-white border-b">
+      <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+        <h1 class="text-2xl font-bold text-gray-900">內容管理系統</h1>
+        <div class="flex gap-4">
+          <button onclick="logout()" class="bg-red-500 text-white hover:bg-red-600 px-4 py-2 rounded-full text-sm font-medium transition-colors">
+            登出
+          </button>
+          <a href="index.html" class="bg-primary text-white hover:bg-primary/90 px-4 py-2 rounded-full text-sm font-medium transition-colors">
+            返回主頁
+          </a>
+        </div>
+      </div>
+    </header>
+
+    <main class="container mx-auto px-6 py-8">
+      <!-- Experience Management -->
+      <section class="mb-12">
+        <div class="flex justify-between items-center mb-6">
+          <h2 class="text-3xl font-bold text-gray-900">工作經歷管理</h2>
+          <button onclick="addExperience()" class="bg-green-500 text-white hover:bg-green-600 px-6 py-3 rounded-full font-medium transition-colors">
+            + 新增工作經歷
+          </button>
+        </div>
+        <div id="experience-admin" class="space-y-6"></div>
+      </section>
+
+      <!-- Projects Management -->
+      <section class="mb-12">
+        <div class="flex justify-between items-center mb-6">
+          <h2 class="text-3xl font-bold text-gray-900">專案管理</h2>
+          <button onclick="addProject()" class="bg-green-500 text-white hover:bg-green-600 px-6 py-3 rounded-full font-medium transition-colors">
+            + 新增專案
+          </button>
+        </div>
+        <div id="projects-admin" class="grid grid-cols-1 md:grid-cols-2 gap-6"></div>
+      </section>
+
+      <!-- Save Button -->
+      <div class="text-center">
+        <button onclick="saveChanges()" class="bg-blue-500 text-white hover:bg-blue-600 px-8 py-3 rounded-full font-medium text-lg transition-colors">
+          儲存變更
+        </button>
+      </div>
+    </main>
+  </div>
+
+  <script>
+    function loadExistingData() {
+      fetch('index.html')
+        .then(response => response.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const doc = parser.parseFromString(html, 'text/html');
+          
+          // Load experiences
+          const experiences = doc.querySelectorAll('#experience-container > div');
+          experiences.forEach(exp => {
+            const title = exp.querySelector('h3')?.textContent || '';
+            const company = exp.querySelector('.text-primary')?.textContent || '';
+            const period = exp.querySelector('.bg-primary')?.textContent?.trim() || '';
+            const skills = Array.from(exp.querySelectorAll('.bg-primary\\/10')).map(s => s.textContent).join(', ');
+            const tasks = Array.from(exp.querySelectorAll('li')).map(li => li.textContent).join('\n');
+            
+            addExperienceWithData(title, company, period, skills, tasks);
+          });
+          
+          // Load projects
+          const projects = doc.querySelectorAll('#projects-container > div');
+          projects.forEach(proj => {
+            const title = proj.querySelector('h3')?.textContent || '';
+            const skills = Array.from(proj.querySelectorAll('.bg-primary\\/10')).map(s => s.textContent).join(', ');
+            const desc = proj.querySelector('p')?.textContent || '';
+            const link = proj.querySelector('a')?.href || '';
+            const img = proj.querySelector('img')?.src || '';
+            
+            addProjectWithData(title, skills, desc, link, img);
+          });
+        });
+    }
+
+    function addExperienceWithData(title, company, period, skills, tasks) {
+      const container = document.getElementById('experience-admin');
+      const newExp = document.createElement('div');
+      newExp.className = 'bg-white rounded-lg border shadow-sm p-6';
+      newExp.innerHTML = `
+        <div class="space-y-4">
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <input type="text" placeholder="職位名稱" class="border rounded-lg px-4 py-2 w-full" value="${title}">
+            <input type="text" placeholder="公司名稱" class="border rounded-lg px-4 py-2 w-full" value="${company}">
+          </div>
+          <input type="text" placeholder="工作期間" class="border rounded-lg px-4 py-2 w-full" value="${period}">
+          <input type="text" placeholder="技能標籤 (用逗號分隔)" class="border rounded-lg px-4 py-2 w-full" value="${skills}">
+          <textarea placeholder="工作內容描述" class="border rounded-lg px-4 py-2 w-full h-32" rows="4">${tasks}</textarea>
+          <button onclick="this.parentElement.parentElement.remove()" class="bg-red-500 text-white hover:bg-red-600 px-4 py-2 rounded-full text-sm font-medium">
+            刪除
+          </button>
+        </div>
+      `;
+      container.appendChild(newExp);
+    }
+
+    function addProjectWithData(title, skills, desc, link, img) {
+      const container = document.getElementById('projects-admin');
+      const newProject = document.createElement('div');
+      newProject.className = 'bg-white rounded-lg border shadow-sm p-6';
+      newProject.innerHTML = `
+        <div class="space-y-4">
+          <div class="border-2 border-dashed border-gray-300 rounded-lg p-8 text-center">
+            <input type="file" accept="image/*" onchange="loadImage(this)" class="hidden" id="img-${Date.now()}">
+            <label for="img-${Date.now()}" class="cursor-pointer text-gray-500 hover:text-gray-700">
+              點擊上傳專案圖片
+            </label>
+            <div class="preview mt-4">${img ? `<img src="${img}" alt="預覽" class="max-w-full h-32 object-cover rounded">` : ''}</div>
+          </div>
+          <input type="text" placeholder="專案標題" class="border rounded-lg px-4 py-2 w-full" value="${title}">
+          <input type="text" placeholder="技術標籤 (用逗號分隔)" class="border rounded-lg px-4 py-2 w-full" value="${skills}">
+          <textarea placeholder="專案描述" class="border rounded-lg px-4 py-2 w-full h-24" rows="3">${desc}</textarea>
+          <input type="url" placeholder="專案連結 (選填)" class="border rounded-lg px-4 py-2 w-full" value="${link}">
+          <button onclick="this.parentElement.remove()" class="bg-red-500 text-white hover:bg-red-600 px-4 py-2 rounded-full text-sm font-medium">
+            刪除
+          </button>
+        </div>
+      `;
+      container.appendChild(newProject);
+    }
+
+    function addExperience() {
+      addExperienceWithData('新職位', '新公司', '開始日期 - 結束日期', '技能1, 技能2', '工作內容描述1\n工作內容描述2');
+    }
+
+    function addProject() {
+      addProjectWithData('新專案', '技術1, 技術2', '專案描述內容', '', '');
+    }
+
+    function loadImage(input) {
+      if (input.files && input.files[0]) {
+        const reader = new FileReader();
+        reader.onload = function(e) {
+          const preview = input.parentElement.querySelector('.preview');
+          preview.innerHTML = `<img src="${e.target.result}" alt="預覽" class="max-w-full h-32 object-cover rounded">`;
+        };
+        reader.readAsDataURL(input.files[0]);
+      }
+    }
+
+    function saveChanges() {
+      alert('變更已儲存！\n\n注意：這是演示功能，實際使用需要後端支援。');
+    }
+
+    function logout() {
+      sessionStorage.removeItem('isLoggedIn');
+      window.location.href = 'login.html';
+    }
+
+    window.onload = function() {
+      if (!sessionStorage.getItem('isLoggedIn')) {
+        window.location.href = 'login.html';
+        return;
+      }
+      loadExistingData();
+    };
+  </script>
+</body>
+</html>

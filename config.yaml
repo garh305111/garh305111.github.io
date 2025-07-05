@@ -1,0 +1,83 @@
+# 個人資訊配置
+personal:
+  name: "林韋廷"
+  name_en: "Wei Ting Lin"
+  title: "AI研究助理"
+  email: "leetin@myyahoo.com"
+  linkedin: "https://www.linkedin.com/in/韋廷-林-3b9ab11aa"
+  description: "專注於自然語言處理與AI藥物開發的研究助理\n致力於運用量化數據工具預測事物發展的可能性"
+  avatar: "avatar.jpg"
+  about: |
+    我是韋廷，擅長自然語言處理以及統計分析，於就學期間擔任學校服務學習的助教，因此有機會從多方的角色思考處理同一事物的難題與思考路徑。
+    
+    對於解析事務本質有無比的熱情，希望除了縝密的邏輯思考更深層的可能性外，現階段想利用量化數據的工具更精確預測事物發展的可能。
+  institution: "國立陽明交通大學 分子醫學與生物工程研究所"
+
+# 工作經歷
+experiences:
+  - title: "專任研究助理"
+    company: "國家衛生研究院生技及藥物研究所"
+    period: "2021.8 - present"
+    skills: ["Python", "Deep Learning", "AI Drug Development"]
+    tasks:
+      - "分析同事在開發中遇到的問題，並提供定制化的解決方案和建議，以幫助他們克服技術難題。"
+      - "建立深度學習模型，如神經網絡架構，用於藥物特性預測、化合物篩选和優化等任務。"
+      - "監控服務器的運行狀態和性能指標，識別潛在問題並採取相應的預防措施。"
+      - "快速響應服務器出現的緊急情況，與IT工程師緊密合作，共同解決問題。"
+
+  - title: "專任研究助理"
+    company: "台北醫學大學大數據科技及管理研究所"
+    period: "2021.3 - 2021.7"
+    skills: ["NLP", "Text Analysis", "CNN/RNN"]
+    tasks:
+      - "利用 NLP 方法對相關數據進行文本分析，包括文本清洗、標記化和特徵提取。"
+      - "設計和實施自然語言處理算法，包括文本預處理、詞袋模型、詞嵌入等技術。"
+      - "建立文本分類、實體識別和情感分析等模型。"
+      - "構建深度學習模型，如CNN、RNN或Transformer，用於處理和分析數據。"
+
+# 專案作品
+projects:
+  - title: "CRISPR/Cas9 研究"
+    image: "CRISPR.jpg"  # 使用本地圖片
+    preview_url: ""  # 留空使用image，填入網址則預覽網站
+    skills: ["Multi-task Learning", "Transformer"]
+    description: "使用多任務學習同時預測多任務模型的架構。我們將使用基於變換器的雙向編碼器表示技術作為主要架構來訓練模型。"
+    link: ""
+
+  - title: "2021 AICUP 醫病決策競賽"
+    image: "2021_aicup.jpg"
+    preview_url: ""
+    skills: ["LSTM", "BERT", "前標"]
+    description: "使用長短期記憶模型以及基於變換器的雙向編碼器等自然語言處理深度學習作為模型架構。"
+    link: ""
+
+  - title: "2021企業數據競賽"
+    image: "data_sta.jpg"
+    preview_url: ""
+    skills: ["Data Science", "亞軍"]
+    description: "數據創新服務生態系推動計畫2021企業數據競賽 玩美移動組 亞軍"
+    link: ""
+
+  - title: "2023 AICUP 多模態病理嗓音分類"
+    image: "multi-modal.jpg"
+    preview_url: "https://github.com/garh305111/AI-CUP-2023-SPRING--"  # 預覽GitHub頁面
+    skills: ["Multi-modal", "Audio Processing"]
+    description: "多模態病理嗓音分類競賽專案"
+    link: "https://github.com/garh305111/AI-CUP-2023-SPRING--"
+
+# 技能
+skills:
+  technical:
+    - "Python & Machine Learning"
+    - "Natural Language Processing"
+    - "Deep Learning (CNN, RNN, Transformer)"
+    - "HTML5 & CSS3"
+    - "Node.js & Angular.js"
+    - "SQL & Database"
+    - "Version Control (Git)"
+
+  certificates:
+    - "AICUP 醫病訊息決策預判競賽 前標"
+    - "2021企業數據競賽 亞軍"
+    - "機器學習工程師能力鑑定"
+    - "統計分析能力證照"
