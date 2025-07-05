@@ -33,28 +33,28 @@ experiences:
 
 projects:
   - title: "AI輔助CRISPR/Cas9預測"
-    image: "CRISPR.jpg"
+    image: "ai_image.jpg"
     preview_url: ""
     skills: ["Multi-task Learning", "Transformer"]
     description: "利用基於Transformer架構的多任務學習模型，同步預測CRISPR靶點效率與特定指標，協助基因編輯設計流程。"
     link: ""
 
   - title: "AICUP 醫病決策競賽"
-    image: ""
+    image: "ai_image.jpg"
     preview_url: "https://www.aicup.tw/ai-cup-2021"
     skills: ["LSTM", "BERT"]
     description: "結合LSTM和BERT進行病患決策預測模型開發，分析病歷文本以協助臨床決策。"
     link: ""
 
   - title: "企業數據競賽亞軍專案"
-    image: ""
+    image: "ai_image.jpg"
     preview_url: "https://www.facebook.com/photo.php?fbid=197692755741872&id=100268118817670&set=a.136343208543494"
     skills: ["Data Science"]
     description: "2021企業數據競賽 玩美移動組 亞軍，運用資料探索、特徵工程及模型開發提升預測效能。"
     link: ""
 
   - title: "多模態病理嗓音分類 (AICUP 2023)"
-    image: "multi-modal.jpg"
+    image: "ai_image.jpg"
     preview_url: "https://www.aicup.tw/post/%E3%80%90%E5%BE%97%E7%8D%8E%E5%90%8D%E5%96%AE%E3%80%91ai-cup-2023-%E6%98%A5%E5%AD%A3%E8%B3%BD%E3%80%8C%E5%A4%9A%E6%A8%A1%E6%85%8B%E7%97%85%E7%90%86%E5%97%93%E9%9F%B3%E5%88%86%E9%A1%9E%E3%80%8D%E7%AB%B6%E8%B3%BD"
     skills: ["Multi-modal Learning", "Audio Processing"]
     description: "整合聲音與元數據的多模態模型，有效區分病理與正常嗓音，協助病症診斷。"
