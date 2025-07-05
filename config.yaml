@@ -40,15 +40,15 @@ projects:
     link: ""
 
   - title: "AICUP 醫病決策競賽"
-    image: "2021_aicup.jpg"
-    preview_url: "https://aidea-web.tw/aicup_meddialog"
+    image: ""
+    preview_url: "https://www.aicup.tw/ai-cup-2021"
     skills: ["LSTM", "BERT"]
     description: "結合LSTM和BERT進行病患決策預測模型開發，分析病歷文本以協助臨床決策。"
     link: ""
 
   - title: "企業數據競賽亞軍專案"
-    image: "data_sta.jpg"
-    preview_url: "https://startup.sme.gov.tw/home/modules/calendar/detail/?sId=5154"
+    image: ""
+    preview_url: "https://www.facebook.com/photo.php?fbid=197692755741872&id=100268118817670&set=a.136343208543494"
     skills: ["Data Science"]
     description: "2021企業數據競賽 玩美移動組 亞軍，運用資料探索、特徵工程及模型開發提升預測效能。"
     link: ""
